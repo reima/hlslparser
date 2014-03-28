@@ -9,7 +9,9 @@ class Allocator
 
 public:
 
-    Allocator();
+    Allocator()
+    {
+    }
 
     template<typename T>
     T* New()

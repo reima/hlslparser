@@ -26,8 +26,9 @@ set(SOURCES
     src/HLSLParser.cpp
     src/HLSLTokenizer.cpp
     src/HLSLTree.cpp
+    src/main.cpp
 )
 
 include_directories(src)
 
-add_library(hlslparser ${HEADERS} ${SOURCES})
+add_executable(hlslparser ${HEADERS} ${SOURCES})

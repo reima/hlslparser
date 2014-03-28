@@ -12,7 +12,7 @@
 namespace M4
 {
 
-int String_Vprintf(char* buffer, int bufferSize, const char* format, va_list args)
+int String_Printf(char* buffer, int bufferSize, const char* format, va_list args)
 {
 #ifdef _MSC_VER
     return vsnprintf(buffer, bufferSize, format, args);
@@ -26,7 +26,7 @@ int String_Printf(char* buffer, int bufferSize, const char* format, ...)
     va_list args;
     va_start(args, format);
 
-    int count = String_Vprintf(buffer, bufferSize, format, args);
+    int count = String_Printf(buffer, bufferSize, format, args);
 
     va_end(args);
     return count;
@@ -55,14 +55,16 @@ double String_ToDouble(const char* buffer, char** end)
     return std::strtod(buffer, end);
 }
 
-int String_ToInt(const char* buffer, char** end)
+int String_ToInteger(const char* buffer, char** end)
 {
     long value = std::strtol(buffer, end, 0);
 
-    if (value > INT_MAX) {
+    if (value > INT_MAX)
+    {
         return INT_MAX;
     }
-    if (value < INT_MIN) {
+    if (value < INT_MIN)
+    {
         return INT_MIN;
     }
 

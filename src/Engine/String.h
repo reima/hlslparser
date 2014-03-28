@@ -6,7 +6,7 @@
 namespace M4
 {
 
-int String_Vprintf(char* buffer, int bufferSize, const char* format, va_list args);
+int String_Printf(char* buffer, int bufferSize, const char* format, va_list args);
 
 int String_Printf(char* buffer, int bufferSize, const char* format, ...);
 
