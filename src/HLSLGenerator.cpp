@@ -7,8 +7,9 @@
 //
 //=============================================================================
 
-#include "Engine/String.h"
+#include "Engine/Assert.h"
 #include "Engine/Log.h"
+#include "Engine/String.h"
 
 #include "HLSLGenerator.h"
 #include "HLSLParser.h"

@@ -7,6 +7,7 @@
 //
 //=============================================================================
 
+#include "Engine/Assert.h"
 #include "Engine/String.h"
 
 #include "HLSLParser.h"

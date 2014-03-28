@@ -1,3 +1,4 @@
+#include "Engine/Allocator.h"
 #include "Engine/Assert.h"
 
 #include "HLSLTree.h"
